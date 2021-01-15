@@ -1,0 +1,16 @@
+{
+    "universities":[
+        {"name":"University of Witwatersrand",
+        "city": "Johanesburg"},
+        {"name": "University of Johannesburg",
+        "city": ["Johanesburg", "Soweto"]},
+        {"name": "University of Cape Town",
+        "city": "Cape Town"},
+        {"name": "University of Pretoria",
+        "city": "Johanesburg"},
+        {"name": "Univen",
+        "city": "Thohoyandou"},
+        {"name": "University of Limpopo",
+        "city": "Polokwane"}
+    ]
+}
