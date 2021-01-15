@@ -3,12 +3,15 @@ import {Form} from '../components';
 
 export default function Signin()
 {
+    function HandleSignin(event)
+    {
+        event.disableDefault();
+    }
+    
     return(
        <Form>
-           <Form.Title> Sign Up for MyApp</Form.Title>
-           <Form.Base>
-               <Form.Input type="text" placeholder = "First name" />
-               <Form.Input type="text" placeholder = "Last name" />
+           <Form.Title> Sign in MyApp</Form.Title>
+           <Form.Base onSubmit={HandleSignin}>
                <Form.Input type="email" placeholder = "Email address" />
                <Form.Input type="password" placeholder="password" />
                <Form.Button>Sign Up</Form.Button>
