@@ -1,12 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
- 
+import * as global from './variables'
+
 const GlobalStyle = createGlobalStyle`
-  body {
+  *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: teal;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+  }
+  body {
+    background: ${global.greyColour};
+    font-family: 'Lato', sans-serif;
+
   }
 `;
- 
+
 export default GlobalStyle;

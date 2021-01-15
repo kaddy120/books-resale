@@ -3,17 +3,18 @@ import BookDetails from './pages/bookDetails';
 import Signin from './pages/signin';
 import Signup from './pages/signup';
 import Home from './pages/home';
+import NavContainer from './container/navContainer'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 export default function App() {
   return (
     <>
     <Router>
+      <NavContainer />
       <Switch>
         <Route exact path="/"> 
            <Home />
