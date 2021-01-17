@@ -15,7 +15,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-SeedBooks(firebase);
+// SeedBooks(firebase);
 
 export {firebase};
 
