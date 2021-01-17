@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import 'firebase/firestore';
+import SeedBooks from '../seedData';
 
 var firebaseConfig = {
   apiKey: "AIzaSyBBJy_T4la6awTQbAYIfzoVfjQeQQyBITA",
@@ -13,6 +14,8 @@ var firebaseConfig = {
   };
 
 firebase.initializeApp(firebaseConfig);
+
+SeedBooks(firebase);
 
 export {firebase};
 
