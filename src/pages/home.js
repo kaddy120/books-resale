@@ -3,5 +3,7 @@ import Browse from '../container/browse'
 
 export default function Home()
 {
-    return (<Browse />);
+    return (
+    <Browse />
+    );
 }

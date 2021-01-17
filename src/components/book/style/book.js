@@ -1,10 +1,15 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+
+    display: flex;
+    flex-wrap: wrap;
+`;
 
 export const Card = styled.div``;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+`;
 
 export const Title = styled.p``;
 

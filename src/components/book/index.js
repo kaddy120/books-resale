@@ -17,8 +17,8 @@ Book.Card = function BookCard({ children, ...restPros }) {
     return <Card {...children}>{children}</Card>
 }
 
-Book.Image = function BookCard({ children, ...restPros }) {
-    return <Image {...children}>{children}</Image>
+Book.Image = function BookCard({...restPros }) {
+    return <Image {...restPros} />
 }
 
 Book.Title = function BookCard({ children, ...restPros }) {

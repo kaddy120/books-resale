@@ -35,7 +35,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "600",
-        Image: ["img8.png"],
+        Image: ["img8.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -57,7 +57,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "1200",
-        Image: ["img.png"],
+        Image: ["img.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -68,7 +68,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "350",
-        Image: ["img1.png"],
+        Image: ["img1.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -79,7 +79,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "400",
-        Image: ["img5.png"],
+        Image: ["img5.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -90,7 +90,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "470",
-        Image: ["img6.png"],
+        Image: ["img6.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -101,7 +101,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "650",
-        Image: ["img9.png"],
+        Image: ["img9.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -112,7 +112,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "100",
-        Image: ["img13.png"],
+        Image: ["img13.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -123,7 +123,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "300",
-        Image: ["img14.png"],
+        Image: ["img14.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -134,7 +134,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "400",
-        Image: ["img15.png"],
+        Image: ["img15.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -145,7 +145,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "760",
-        Image: ["image1.png"],
+        Image: ["image1.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -156,7 +156,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "800",
-        Image: ["img16.png"],
+        Image: ["img16.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -167,7 +167,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "1300",
-        Image: ["img17.png"],
+        Image: ["img17.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -178,7 +178,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "900",
-        Image: ["img18.png"],
+        Image: ["img18.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -189,7 +189,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "440",
-        Image: ["img19.png"],
+        Image: ["img19.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -200,7 +200,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "200",
-        Image: ["img20.png"],
+        Image: ["img20.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -211,7 +211,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "350",
-        Image: ["image3.png"],
+        Image: ["img3.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -233,7 +233,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "1200",
-        Image: ["img12.png"],
+        Image: ["img12.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -244,7 +244,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "320",
-        Image: ["img20.png"],
+        Image: ["img20.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -255,7 +255,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "390",
-        Image: ["image.png"],
+        Image: ["img5.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
@@ -266,7 +266,7 @@ export default function SeedBooks(firebase) {
         DatePosted: "2021-01-02",
         Description: "this data is for testing seeding",
         minPrice: "300",
-        Image: ["image.png"],
+        Image: ["img.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
     });
