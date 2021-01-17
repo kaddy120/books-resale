@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import Browse from '../container/browse'
 
 export default function Home()
 {
-    return (<p>hellow from a home page</p>);
+    return (<Browse />);
 }
