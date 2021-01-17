@@ -12,9 +12,9 @@ import {
     Base
 } from './style/form'
 
-export default function Form({ children, ...restProps }) {
+export default function Form({ children}) {
     return (
-        <Container {...restProps}>
+        <Container>
             <Inner>{children}</Inner>
         </Container>)
 }
@@ -25,10 +25,11 @@ Form.Title = function FormTitle({ children}) {
     )
 }
 
-Form.Base = function FormBase({children, restProps})
+Form.Base = function FormBase({children, ...restProps})
 {
 return(<Base {...restProps}>{children}</Base>)
 }
+
 Form.Text = function FormText({ children, ...restProps }) {
     return (
         <Text {...restProps}>{children}</Text>
