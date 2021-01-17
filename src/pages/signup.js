@@ -20,8 +20,6 @@ export default function Signin() {
 
         return firebase.auth().createUserWithEmailAndPassword(emailAddress, password)
             .then((result) => {
-                   console.log(result)
-                   console.log(result.user)
                     result.user.updateProfile(
                         {
                             firstName: firstName,
