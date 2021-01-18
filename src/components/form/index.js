@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {
     Title,
     Container,
@@ -8,8 +9,9 @@ import {
     Input,
     Button,
     Text,
-    Link,
-    Base
+    Base,
+    InputControl,
+    Card
 } from './style/form'
 
 export default function Form({ children}) {
@@ -54,9 +56,22 @@ Form.Error = function FormError({ children, ...restProps }) {
     )
 }
 
+Form.InputControl = function FormInputControl({children})
+{
+    return(
+    <InputControl>{children}</InputControl>
+    )
+}
+
 Form.Input = function FormInput({...restProps }) {
     return (
         <Input {...restProps} />
+    )
+}
+
+Form.Card = function FormCard({ children, ...restProps }) {
+    return (
+        <Card {...restProps}>{children}</Card>
     )
 }
 
