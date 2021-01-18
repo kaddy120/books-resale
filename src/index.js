@@ -6,7 +6,6 @@ import {firebase} from './lib/firebase';
 import { FirebaseContext } from './context/firebase';
 import GlobalStyle from './globalStyles'
 
-console.log(firebase);
 
 ReactDOM.render(
   <React.StrictMode>

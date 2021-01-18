@@ -31,6 +31,8 @@ export const Card = styled.div`
     transition: box-shadow 800ms, border 300ms, -webkit-box-shadow 800ms;
     box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.1),
       -1px -1px 8px 1px rgba(0, 0, 0, 0.1) ;
+
+    position: relative;
     &:hover{
         box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.1),
       -4px -4px 8px 2px rgba(0, 0, 0, 0.1) ;
@@ -55,4 +57,21 @@ export const Price = styled.p`
 
 export const Text = styled.p``;
 
-export const Watch = styled.button``;
+export const Watch = styled.button`
+  background-color: white; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding-top: 4px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid #f4f4f4;
+`;

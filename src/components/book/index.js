@@ -1,4 +1,5 @@
 import React from 'react';
+import { Children } from 'react/cjs/react.production.min';
 import {
     Container,
     Card,
@@ -9,31 +10,48 @@ import {
     Watch
 } from './style/book';
 
+import { FaRegHeart, FaHeart } from 'react-icons/fa';
+import { IconContext } from "react-icons";
+
 export default function Book({ children, ...restPros }) {
     return <Container {...restPros}>{children}</Container>
 }
 
 Book.Card = function BookCard({ children, ...restPros }) {
-    return <Card {...children}>{children}</Card>
+    return <Card {...restPros}>{children}</Card>
 }
 
-Book.Image = function BookCard({...restPros }) {
+Book.Image = function BookCard({ ...restPros }) {
     return <Image {...restPros} />
 }
 
 Book.Title = function BookCard({ children, ...restPros }) {
-    return <Title {...children}>{children}</Title>
+    return <Title {...restPros}>{children}</Title>
 }
 
 Book.Price = function BookCard({ children, ...restPros }) {
-    return <Price {...children}>{children}</Price>
+    return <Price {...restPros}>{children}</Price>
 }
 
 Book.Text = function BookCard({ children, ...restPros }) {
-    return <Text {...children}>{children}</Text>
+    return <Text {...restPros}>{children}</Text>
 }
 
+// function BlueLargeIcon() {
+//     return (
+//       <IconContext.Provider
+//         value={{ color: 'blue' }} >
+//         <div>
+          
+//         </div>
+//       </IconContext.Provider>
+//     );
+//   }
+
 //it some sort of a button with a state, that depends on a book that a user is either watching or not;
-Book.Watch = function BookCard({ children, ...restPros }) {
-    return <Watch {...children}>{children}</Watch>
+Book.Watch = function BookWatch({ children, colour}) {
+    return (
+        //FaHeart
+    <Watch color="blue"><FaRegHeart color="rgb(42, 145, 241)" /></Watch>
+        )
 }
