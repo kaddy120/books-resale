@@ -1,10 +1,12 @@
-import React, {useEffect} from 'react';
-import useContext from '../hook/content';
+import React, {useEffect, useContext} from 'react';
+import useContent from '../hook/content';
 import BookCard from './bookCard';
+import {userContext} from '../context/userContext';
 
 export default function Browse()
 {
-    const { Books } = useContext("Books");
+    const authUser = useContext(userContext);
+    const { Books } = useContent("Books");
     console.log(Books);
 
     useEffect(() => {
@@ -15,6 +17,6 @@ export default function Browse()
     }, [Books])
 
     return(
-        <BookCard books={Object.values(Books)} />
+        <BookCard user={authUser} books={Object.values(Books)} />
     )
 }
