@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useHistory, useLocation} from 'react-router-dom';
 import { Form } from '../components';
 import { firebase } from '../lib/firebase';
 
@@ -8,22 +9,23 @@ export default function Signin() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const history = useHistory();
+    const location = useLocation();
+
+    const {from } = location.state || {pathname: "/"}
 
     function HandleSignin(event) {
         event.disableDefault();
 
         firebase.auth().signInWithEmailAndPassword(email, password)
         .then(()=>{
+            history.push(from);
+            //am not so sure if am listening to sigin and out here, but i will check later;
             //i have to redirect to the right page;
         })
         .catch((err)=>{
             setError(err.message);
         })
-    }
-
-
-    function HandleSignin(event) {
-        event.preventDefault();
     }
 
     return (
