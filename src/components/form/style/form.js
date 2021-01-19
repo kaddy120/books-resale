@@ -25,6 +25,9 @@ export const Inner = styled.div`
     flex-direction: column;
 `;
 
+export const Label = styled.label`
+`;
+
 export const Title = styled.h1`
     font-size: larger;
     font-weight: 700;
@@ -82,3 +85,7 @@ export const Button = styled.button`
         transform: scale(0.985);
     }
 `;
+
+export const Select = styled.select``;
+
+export const Option = styled.option``;

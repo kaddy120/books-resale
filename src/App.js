@@ -2,8 +2,11 @@ import React from 'react';
 import BookDetails from './pages/bookDetails';
 import Signin from './pages/signin';
 import Signup from './pages/signup';
+import Sell from './pages/sell';
 import Home from './pages/home';
 import NavContainer from './container/navbar';
+import ProvideUser from './context/ProviderUser';
+import ProtectedRoute from './routing/routingAuth'
 
 import {
   BrowserRouter as Router,
@@ -13,25 +16,32 @@ import {
 
 export default function App() {
   return (
-    <Router>
-      <NavContainer />
-      <Switch>
-        <Route exact path="/"> 
-           <Home />
-        </Route>
-        <Route  path="/sign-up"> 
-           <Signup />
-        </Route>
-        <Route  path="/sign-in"> 
-           <Signin />
-        </Route>
-      </Switch>
-    </Router>
+    <ProvideUser>
+      <Router>
+        <NavContainer />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/sign-up">
+            <Signup />
+          </Route>
+          <Route path="/sign-in">
+            <Signin />
+          </Route>
+          <ProtectedRoute path="/sell">
+            <Sell />
+          </ProtectedRoute>
+        </Switch>
+      </Router>
+    </ProvideUser>
   );
 }
 
+
+
 // {
-//   "Books" : {
+  //   "Books" : {
 //     "Category" : "Mathematics",
 //     "DatePosted" : "2021-01-02",
 //     "Description" : "Very Good",
