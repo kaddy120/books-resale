@@ -47,11 +47,3 @@ Book.Text = function BookCard({ children, ...restPros }) {
 //       </IconContext.Provider>
 //     );
 //   }
-
-//it some sort of a button with a state, that depends on a book that a user is either watching or not;
-Book.Watch = function BookWatch({ children, colour, user}) {
-    return (
-        //FaHeart
-    <Watch color="blue"><FaRegHeart color="rgb(42, 145, 241)" /></Watch>
-        )
-}

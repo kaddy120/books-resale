@@ -7,7 +7,7 @@ export default function Browse()
 {
     const authUser = useContext(userContext);
     const { Books } = useContent("Books");
-    console.log(Books);
+    console.log("books", Books);
 
     useEffect(() => {
         console.log("render");

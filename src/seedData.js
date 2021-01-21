@@ -1,13 +1,16 @@
 
 export default function SeedBooks(firebase) {
-    let numberOfBooks = 0;
-    const BookId = () => numberOfBooks++;
-
-    var postListRef = firebase.database().ref();
-    var newPostRef = postListRef.child('Books');
-
-    newPostRef.push({
-        BookId: BookId(),
+    //let numberOfBooks = 0;
+    //const BookId = () => numberOfBooks++;
+    //var newPostKey = firebase.database().ref().child('posts').push().key;
+   //var postListRef = firebase.database().ref(;
+   //firebase.database().ref().update(updates)
+   //var newPostRef = postListRef.child('Books';
+   //firebase.database().ref().update(updates)
+   var newPostKey = firebase.database().ref().child("Books").push().key;
+   var updates = {};
+   updates['/posts/' + newPostKey] = {
+        BookId: newPostKey,
         Title: "How to save money",
         Categoriy: "Science & Methamatics",
         DatePosted: "2021-01-02",
@@ -16,9 +19,14 @@ export default function SeedBooks(firebase) {
         Image: ["image1.png"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+    
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "How to save money",
         Categoriy: "Science & Methamatics",
         DatePosted: "2021-01-02",
@@ -27,9 +35,13 @@ export default function SeedBooks(firebase) {
         Image: ["image2.png"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates)
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Fundamentals of cost and management accounting",
         Categoriy: "Business & Finance",
         DatePosted: "2021-01-02",
@@ -38,9 +50,13 @@ export default function SeedBooks(firebase) {
         Image: ["img8.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates)
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "A student's approach to income Tax",
         Categoriy: "Business & Finance",
         DatePosted: "2021-01-02",
@@ -49,9 +65,13 @@ export default function SeedBooks(firebase) {
         Image: ["image4.png"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "The ultimate advance guide to master c# programming",
         Categoriy: "Computer Scince",
         DatePosted: "2021-01-02",
@@ -60,9 +80,13 @@ export default function SeedBooks(firebase) {
         Image: ["img.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Software Engineering",
         Categoriy: "Computer Scince",
         DatePosted: "2021-01-02",
@@ -71,9 +95,13 @@ export default function SeedBooks(firebase) {
         Image: ["img1.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Clean Code",
         Categoriy: "Computer Science",
         DatePosted: "2021-01-02",
@@ -82,9 +110,13 @@ export default function SeedBooks(firebase) {
         Image: ["img5.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Node.js",
         Categoriy: "Computer Science",
         DatePosted: "2021-01-02",
@@ -93,9 +125,13 @@ export default function SeedBooks(firebase) {
         Image: ["img6.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Principles of Foundation Engineering",
         Categoriy: "Engineering",
         DatePosted: "2021-01-02",
@@ -104,9 +140,13 @@ export default function SeedBooks(firebase) {
         Image: ["img9.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Introduction to computer science",
         Categoriy: "Computer Science",
         DatePosted: "2021-01-02",
@@ -115,9 +155,13 @@ export default function SeedBooks(firebase) {
         Image: ["img13.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Discoving computer science",
         Categoriy: "Computer Science",
         DatePosted: "2021-01-02",
@@ -126,9 +170,13 @@ export default function SeedBooks(firebase) {
         Image: ["img14.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates)
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Javascript & JQuery",
         Categoriy: "Computer Science",
         DatePosted: "2021-01-02",
@@ -137,9 +185,13 @@ export default function SeedBooks(firebase) {
         Image: ["img15.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+ 
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "How to save money",
         Categoriy: "Engineering",
         DatePosted: "2021-01-02",
@@ -148,9 +200,13 @@ export default function SeedBooks(firebase) {
         Image: ["image1.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "A history of inequality in South Africa",
         Categoriy: "Humanites",
         DatePosted: "2021-01-02",
@@ -159,9 +215,13 @@ export default function SeedBooks(firebase) {
         Image: ["img16.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Cultural Studies",
         Categoriy: "Humanites",
         DatePosted: "2021-01-02",
@@ -170,9 +230,13 @@ export default function SeedBooks(firebase) {
         Image: ["img17.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "The digital arts and humanities",
         Categoriy: "Humanites",
         DatePosted: "2021-01-02",
@@ -181,9 +245,13 @@ export default function SeedBooks(firebase) {
         Image: ["img18.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Game theory of humanities",
         Categoriy: "Humanites",
         DatePosted: "2021-01-02",
@@ -192,9 +260,13 @@ export default function SeedBooks(firebase) {
         Image: ["img19.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Pure Mathematics 1",
         Categoriy: "Science & Mathematics",
         DatePosted: "2021-01-02",
@@ -203,9 +275,13 @@ export default function SeedBooks(firebase) {
         Image: ["img20.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "How to save money",
         Categoriy: "Social Science",
         DatePosted: "2021-01-02",
@@ -214,9 +290,13 @@ export default function SeedBooks(firebase) {
         Image: ["img3.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Practical statics for data scientists",
         Categoriy: "Science & Mathematics",
         DatePosted: "2021-01-02",
@@ -225,9 +305,13 @@ export default function SeedBooks(firebase) {
         Image: ["img10.png"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "The law of contract",
         Categoriy: "Law",
         DatePosted: "2021-01-02",
@@ -236,9 +320,11 @@ export default function SeedBooks(firebase) {
         Image: ["img12.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "Numerical Analysis",
         Categoriy: "Science & Mathematics",
         DatePosted: "2021-01-02",
@@ -247,9 +333,13 @@ export default function SeedBooks(firebase) {
         Image: ["img20.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "How to save money",
         Categoriy: "Medicine & Health",
         DatePosted: "2021-01-02",
@@ -258,9 +348,13 @@ export default function SeedBooks(firebase) {
         Image: ["img5.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
-    newPostRef.push({
-        BookId: BookId(),
+    };
+    firebase.database().ref().update(updates);
+
+    newPostKey = firebase.database().ref().child("Books").push().key;
+    updates = {};
+    updates['/Books/'+newPostKey] ={
+        BookId: newPostKey,
         Title: "How to save money",
         Categoriy: "Medicine & Health",
         DatePosted: "2021-01-02",
@@ -269,7 +363,8 @@ export default function SeedBooks(firebase) {
         Image: ["img.jpg"],
         State: "",
         User_id: "FuWYurz0XQMcPq12cFre2PE7Zbr2",
-    });
+    };
+    firebase.database().ref().update(updates);
 
 
     //   "Business & Finance",

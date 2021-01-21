@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import {Link} from 'react-router-dom';
 
 export const Container = styled.div`
 
@@ -10,12 +11,15 @@ export const Container = styled.div`
 `;
 
 //card is of type link
-export const Card = styled.div`
+export const Card = styled(Link)`
     display: flex;
     flex-direction: column;
     margin: 10px;
     margin-bottom: 15px;
     max-width: 200px;
+    text-decoration: none;
+    //i will edit later;
+    //color: black;
     height: 303px;
     width: 100%;
     background-color: white;
@@ -57,21 +61,3 @@ export const Price = styled.p`
 
 export const Text = styled.p``;
 
-export const Watch = styled.button`
-  background-color: white; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  padding-top: 4px;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border: 1px solid #f4f4f4;
-`;
