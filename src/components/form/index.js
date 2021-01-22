@@ -105,7 +105,7 @@ export function SelectOptions({ options, HandleChange }) {
     console.log(Options);
 
     return (
-    <Form.Select onChange={({target})=>HandleChange(target.value)} >
+    <Form.Select onChange={HandleChange} >
      {Options.map((option, index) => 
        <Form.Option 
          key={index}

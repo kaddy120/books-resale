@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import 'firebase/firestore';
+import 'firebase/storage'
 import SeedBooks from '../seedData';
 
 var firebaseConfig = {
@@ -15,8 +16,9 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+const storage = firebase.storage();
 //SeedBooks(firebase);
 
-export {firebase};
+export {firebase, storage};
 
   
