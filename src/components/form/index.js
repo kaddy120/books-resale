@@ -100,12 +100,10 @@ Form.Option = function FormButton({ children, ...restProps }) {
     )
 }
 
-export function SelectOptions({ options, HandleChange }) {
+export function SelectOptions({ options, handle, ...restProps }) {
     const Options = Object.values(options);
-    console.log(Options);
-
     return (
-    <Form.Select onChange={HandleChange} >
+    <Form.Select {...restProps} onChange={handle} >
      {Options.map((option, index) => 
        <Form.Option 
          key={index}
