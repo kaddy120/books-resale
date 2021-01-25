@@ -4,6 +4,7 @@ import Signin from './pages/signin';
 import Signup from './pages/signup';
 import Sell from './pages/sell';
 import Home from './pages/home';
+import BookDetail from './pages/bookDetails'
 import NavContainer from './container/navbar';
 import ProvideUser from './context/ProviderUser';
 import ProtectedRoute from './routing/routingAuth'
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/sign-up">
             <Signup />
           </Route>
+          <Route path="/bookDetails/:BookId" component={BookDetail} />
           <Route path="/sign-in">
             <Signin />
           </Route>

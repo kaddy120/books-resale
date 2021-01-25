@@ -40,7 +40,7 @@ Form.Text = function FormText({ children, ...restProps }) {
     )
 }
 
-Form.Small = function FormSmall({ children, ...restProps }) {
+Form.Error = function FormSmall({ children, ...restProps }) {
     return (
         <Small {...restProps}>{children}</Small>
     )
@@ -101,10 +101,9 @@ Form.Option = function FormButton({ children, ...restProps }) {
 }
 
 export function SelectOptions({ options, handle, ...restProps }) {
-    const Options = Object.values(options);
     return (
-    <Form.Select {...restProps} onChange={handle} >
-     {Options.map((option, index) => 
+    <Form.Select  {...restProps} onChange={handle} >
+     {options.map((option, index) => 
        <Form.Option 
          key={index}
          value={JSON.stringify(option)}> 

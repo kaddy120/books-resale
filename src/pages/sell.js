@@ -40,11 +40,9 @@ export default function Sell() {
         setThumbnail(container);
     }
 
-    //const [secondPicture, setSecondPicture] = useState("");
     const user = useContext(userContext);
 
     const HandleChange = (event) => {
-        console.log(event.target.name);
         setBook({ ...book, [event.target.name]: event.target.value });
     }
 
@@ -74,15 +72,15 @@ export default function Sell() {
 
         console.log(book);
         
-        // var newPostKey = firebase.database().ref().child("Books").push().key;
-        // var updates = {};
-        // book.BookId = newPostKey;
-        // book.User_id = user.uid;
-        // updates['/Books/' + newPostKey] = book;
-        // firebase.database().ref().update(updates);
-        // setBook(initBook);
-        // setInputList([]);
-        // setThumbnail([]);
+        var newPostKey = firebase.database().ref().child("Books").push().key;
+        var updates = {};
+        book.BookId = newPostKey;
+        book.User_id = user.uid;
+        updates['/Books/' + newPostKey] = book;
+        firebase.database().ref().update(updates);
+        setBook(initBook);
+        setInputList([]);
+        setThumbnail([]);
     }
 
     return (
@@ -111,7 +109,7 @@ export default function Sell() {
                         name="Category"
                         value={book.Category}
                         handle={HandleChange}
-                        options={catergories} />
+                        options={Catergories} />
                 </Form.InputControl>
                 <Form.InputControl>
                     <Form.Label>Minimum Price</Form.Label>

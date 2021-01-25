@@ -9,8 +9,6 @@ export default function useContent(target) {
             .ref(target).on('value', (snapshot) => {
                 const allData = snapshot.val();
                 setContent(allData);
-                //don't lose the book keys, what if the owner of the book want to edit it
-                //setContent(Object.values(allData));
             })
     },[])
     
