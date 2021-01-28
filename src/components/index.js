@@ -5,3 +5,4 @@ export {default as Book} from './book';
 export {default as WatchList} from './watchList';
 export {default as BookDetails} from './bookDetails';
 export {default as Signout} from './signout';
+export {default as PlaceBid} from './bid';

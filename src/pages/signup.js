@@ -6,20 +6,21 @@ import Univesities from '../fixtures/University.json';
 import { firebase } from '../lib/firebase';
 import {userContext} from '../context/userContext'
 
+const initUser = {
+    firstName: "",
+    lastName: "",
+    emailAddress: "",
+    university: "",
+    password: "",
+    Books:[]
+}
+
 export default function Signup() {
     //const { firebase } = useContext(FirebaseContext);
     const history = useHistory();
-    const [user, setUser] = useState(
-        {
-            firstName: "",
-            lastName: "",
-            emailAddress: "",
-            university: "",
-            password: "",
-            Books:[]
-        }
-    );
+    const [user, setUser] = useState(initUser);
     
+    console.log("run component from the beginning")
     const [serveError, setServerError] = useState("")
     const [error, setError] = useState({
         firstName: "",
@@ -30,17 +31,70 @@ export default function Signup() {
     });
 
     function HandleChange(event){
-        console.log(event.target.name);
         setUser({...user, [event.target.name] : event.target.value})
     }
 
-    function ValidInput()
-    {
-        
-    }
+    // function InputsAreValid(user)
+    // {
+    // let isValid = true;
+
+    // var regName = /^[a-z]+$/i;
+
+    // if (!regName.test(user.firstName) || true) {
+    //      setError({firstName: "Invalide first name" });
+    //      console.log(1);
+    //   isValid = false;
+    // }
+    // if (!regName.test(user.lastName) || true) {
+    //     setError({...error, lastName: "Invalide last name" }, function(){
+    //         console.log(2);
+    //     });
+    //   isValid = false;
+    // }
+    // if (user.password.length < 6) {
+    //     setError({...error, password: "Password should have at least 6 characters"});
+    //     console.log(3);
+    //   isValid = false;
+    // }
+    // if (!validateEmail(user.emailAddress)) {
+    //     setError({...error, emailAddress: "Enter a valide email address" });
+    //   isValid = false;
+    // }
+    // console.log(error)
+    //  return isValid;
+
+    // }
 
     function handleSignup(event) {
         event.preventDefault();
+        let isValid = true;
+
+    var regName = /^[a-z]+$/i;
+
+    if (!regName.test(user.firstName) || true) {
+         setError({firstName: "Invalide first name" });
+         console.log(1);
+      isValid = false;
+    }
+    if (!regName.test(user.lastName) || true) {
+        setError({...error, lastName: "Invalide last name" }, function(){
+            console.log(2);
+        });
+      isValid = false;
+    }
+    if (user.password.length < 6) {
+        setError({...error, password: "Password should have at least 6 characters"});
+        console.log(3);
+      isValid = false;
+    }
+    if (!validateEmail(user.emailAddress)) {
+        setError({...error, emailAddress: "Enter a valide email address" });
+      isValid = false;
+    }
+        if(!isValid) 
+        {
+               console.log(error);
+               return;} 
 
         return firebase.auth().createUserWithEmailAndPassword(user.emailAddress, user.password)
             .then((result) => {
@@ -57,17 +111,20 @@ export default function Signup() {
                         console.log(updates);
                         firebase.database().ref().update(updates);
 
+                        //what i need is a working domain to redirect, i think it's working
                         var actionCodeSettings = {
                             url: 'http://myapp.com/sell',
                           };
 
-                        authUser.sendEmailVerification(actionCodeSettings).then(function() {
+                        authUser.sendEmailVerification().then(function() {
                             alert("varification email is sent")
                           }).catch(function(error) {
                               console.log("email not sent");
                             console.log(error.message)
                           });
-                        //history.push('./');
+                          //i should push to the page that tells the user to verify their email. 
+                          //if user is not verified, i will treat it as if it's unauthenticated
+                        history.push('./');
                     }
                 }
             )
@@ -97,6 +154,7 @@ export default function Signup() {
                         placeholder="Last name" />
                     <Form.Error>{error.lastName}</Form.Error>
                     <Form.Input type="email"
+                        required 
                         onChange={HandleChange}
                         value={user.emailAddress}
                         name="emailAddress"
@@ -120,3 +178,8 @@ export default function Signup() {
         </Form>
     )
 }
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }

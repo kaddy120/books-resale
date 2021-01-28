@@ -64,7 +64,7 @@ export const ErroSmall = styled.small``;
 
 export const Base = styled.form`
     display: flex;
-    flex-direction: column;
+    flex-direction: ${({row})=> row? "row": "column" };
     align-items: center;  
     /* margin: auto; */
 
