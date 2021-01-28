@@ -9,7 +9,7 @@ import React from 'react';
 //
 // how do i know if a user is already watching a book?????
 
-export default function WatchList({ colour, user, BookId }) {
+export default function WatchList({ colour, user, BookId, ...restProps }) {
 
     const history = useHistory();
     function HandleWatch() {
@@ -24,6 +24,6 @@ export default function WatchList({ colour, user, BookId }) {
 //get all user watchlist_id, disable the button if the book_id is already a part of user watch list
     return (
         //FaHeart
-        <Watch color="blue" type="button" onClick={HandleWatch}><FaRegHeart color="rgb(42, 145, 241)" /></Watch>
+        <Watch {...restProps} color="blue" type="button" onClick={HandleWatch}><FaRegHeart color="rgb(42, 145, 241)" /></Watch>
     )
 }

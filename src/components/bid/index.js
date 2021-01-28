@@ -26,7 +26,7 @@ export default function Bid({ book, ...restProps }) {
     return (
     <Container>
         <InnerLeft>
-            Current Bid:
+            <Text>Current Bid:</Text>
         </InnerLeft>
         <InnerRight>
             <Offering>
@@ -41,7 +41,10 @@ export default function Bid({ book, ...restProps }) {
             <LiteText>Enter ZAR {book.MinBidPrice} or more</LiteText>
             <AddWatchWrapper>
                 <div></div>
-                <WatchList />
+                <div style={{display: "flex"}}> 
+                <WatchList position="static" />
+                <p style={{fontSize: "12px", padding: "5px 0 0 6px"}}>add to watchlist</p>
+                </div>
             </AddWatchWrapper>
         </InnerRight>
     </Container>

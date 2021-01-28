@@ -1,7 +1,7 @@
 import {Book, BookDetails} from '../components';
 import {useState} from 'react';
 import { Title } from '../components/bookDetails/style/bookDetails';
-import {PlaceBid} from '../components'
+import {PlaceBid, ContactSeller} from '../components'
 import { FaRProject } from 'react-icons/fa';
 
 export default function DetailsContainer({book, user})
@@ -25,7 +25,8 @@ export default function DetailsContainer({book, user})
            <BookDetails.InnerRight>
            <Title>{book.Title}</Title>
            <hr/>
-           <PlaceBid book={book} />     
+           <PlaceBid book={book} /> 
+            <ContactSeller />
            </BookDetails.InnerRight>
        </BookDetails>
    )

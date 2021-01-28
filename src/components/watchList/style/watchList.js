@@ -14,7 +14,7 @@ export const Watch = styled.button`
   height: 30px;
   width: 30px;
   padding-top: 4px;
-  position: absolute;
+  position: ${({position})=> position? position:  "absolute"};
   bottom: 10px;
   right: 10px;
   border: 1px solid #f4f4f4;
