@@ -12,9 +12,11 @@ import {
     Text,
     Price,
     LiteText,
-    AddWatchWrapper
+    AddWatchWrapper,
+    Input,
+    Button
 } from './style/bid'
-import { Button } from '../form/style/form';
+
 
 export default function Bid({ book, ...restProps }) {
 
@@ -38,7 +40,7 @@ export default function Bid({ book, ...restProps }) {
             </Text>
             </Offering>
             <BidForm book={book} setBidError={setBidError} />
-            <LiteText>Enter ZAR {book.MinBidPrice} or more</LiteText>
+            <LiteText >Enter ZAR {book.MinBidPrice} or more</LiteText>
             <AddWatchWrapper>
                 <div></div>
                 <div style={{display: "flex"}}> 
@@ -90,7 +92,7 @@ function BidForm({book, setBidError}) {
     return (
         //form flex-direction 
         <Form.Base row onSubmit={(event) => handleSubmit(event)}>
-            <Form.Input
+            <Input
              onChange={({target})=> setBitOffer(target.value)}
              value= {bidOffer}
              type="number" />

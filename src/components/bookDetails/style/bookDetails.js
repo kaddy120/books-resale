@@ -50,7 +50,17 @@ export const SImage = styled.img`
 
     
 `;
-export const Title = styled.h1``;
+export const Title = styled.h1`
+font-size: 18px;
+    font-weight: bold;
+    color: black;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    display: inline;
+
+`;
 
 export const Text = styled.p``;
 
