@@ -1,15 +1,36 @@
 import styled from 'styled-components/macro';
-
-export const NavContainer = styled.ul`
-    
-`;
-export const MenuItem = styled.li`
-
-`;
+import { Link as link } from 'react-router-dom';
 
 
 export const Container = styled.div`
-            display: flex;
-            justify-content: space-space-between;
             height: 60px;
-        `;
+`;
+export const Inner = styled.div`
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;  
+    justify-content: space-between;
+`;
+
+export const NavContainer = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    list-style: none;
+   
+`;
+export const MenuItem = styled.li`
+     margin: auto 10px;
+     padding-bottom: 3px;
+     /* transition: border-bottom 0.1s; */
+     &:hover{
+         border-bottom: 2px solid #333;
+     }
+
+`;
+
+export const Link = styled(link)`
+        text-decoration: none;
+        color: #333;       
+`

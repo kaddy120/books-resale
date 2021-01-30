@@ -86,6 +86,9 @@ export const Button = styled.button`
     }
 `;
 
-export const Select = styled.select``;
+export const Select = styled.select`
+    width: ${({width})=> width};
+    height: ${({height})=>height};
+`;
 
 export const Option = styled.option``;

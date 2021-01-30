@@ -82,7 +82,7 @@ Form.Button = function FormButton({ children, ...restProps }) {
     )
 }
 
-Form.Select = function FormButton({ children, ...restProps }) {
+Form.Select = function FormSelect({ children, ...restProps }) {
     return (
         <Select {...restProps}>{children}</Select>
     )
@@ -102,14 +102,14 @@ Form.Option = function FormButton({ children, ...restProps }) {
 
 export function SelectOptions({ options, handle, ...restProps }) {
     return (
-    <Form.Select  {...restProps} onChange={handle} >
+    <Select  {...restProps} onChange={handle} >
      {options.map((option, index) => 
-       <Form.Option 
+       <Option 
          key={index}
          value={JSON.stringify(option)}> 
          {option}
-       </Form.Option>
+       </Option>
      )}
-     </Form.Select>
+     </Select>
     )
 }

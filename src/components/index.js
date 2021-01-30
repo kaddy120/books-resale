@@ -7,3 +7,4 @@ export {default as BookDetails} from './bookDetails';
 export {default as Signout} from './signout';
 export {default as PlaceBid} from './bid';
 export {default as ContactSeller} from './contactSeller'
+export {default as FilterByUni} from './filterByUni';

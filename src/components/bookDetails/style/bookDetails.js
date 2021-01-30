@@ -22,8 +22,15 @@ export const InnerRight = styled.section`
 
 `;
 
-export const Image = styled.img`
+export const MainImageWrapper = styled.div`
     width: 100%;
+    height: 500px;
+`;
+
+export const Image = styled.img`
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 `;
 
 export const ImagesContainer = styled.ul`

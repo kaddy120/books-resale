@@ -1,9 +1,13 @@
-import {NavContainer, MenuItem, Container} from './style/navbar';
-import {Link} from 'react-router-dom';
+import { NavContainer, MenuItem, Container, Inner, Link } from './style/navbar';
+
 
 export default function Navbar({ children, ...restProps }) {
     return (
-        <Container {...restProps}>{children}</Container>
+        <Container {...restProps}>
+            <Inner>
+                {children}
+            </Inner>
+        </Container>
     )
 }
 
@@ -14,9 +18,14 @@ Navbar.Container = function NavLinkContainer({ children }) {
 }
 
 Navbar.Link = function Navbar({ children, ...restProps }) {
-    return (
-        <MenuItem>
+    return (<MenuItem>
             <Link {...restProps}>{children}</Link>
         </MenuItem>
+    )
+}
+
+Navbar.Log = function NavbarLog({ children, ...restProps }) {
+    return (
+        <Link {...restProps}>{children}</Link>
     )
 }

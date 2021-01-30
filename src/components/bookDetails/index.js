@@ -8,7 +8,8 @@ import {
     InnerLeft,
     InnerRight,
     Text,
-    ImageController
+    ImageController,
+    MainImageWrapper
 } from './style/bookDetails'
 
 export default function BookDetails({ children, ...restProps }) {
@@ -20,7 +21,10 @@ BookDetails.InnerLeft = function BooksDetailsLeft({ children, restProps }) {
 }
 
 BookDetails.Image = function BookDetailsImage({ ...restProps }) {
-    return (<Image {...restProps} />)
+    return (<MainImageWrapper>
+        <Image {...restProps} />
+    </MainImageWrapper>
+    )
 }
 
 BookDetails.ImageController = function ImgController({ children, ...restProps }) {
